@@ -5,7 +5,7 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 import axios from 'axios';
 import { GoogleLogin } from '@react-oauth/google';
 
-const Login = ({ onLogin }) => { // Receive onLogin as a prop
+const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => { // Receive onLogin as a prop
         const token = senddata.data.access;
         localStorage.setItem('accessTokens', token);
         
-        // Call the onLogin function to update the authentication state
+      
         onLogin(); 
 
         // Navigate to the dashboard after successful login
